@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react'
+import { Card } from 'react-bootstrap'
+
 
 const Information = () => {
 
@@ -18,10 +20,16 @@ const Information = () => {
         <div>
             {
                data.length ? data.map(crypto => 
-                <div key={crypto.id} className='cryptoinf'>
-                    <p>{crypto.symbol}</p>
-                    <p>{crypto.name}</p>
-                </div>
+            
+
+<div className="cryptoinf">
+    <div className="info">
+        <div className="name">{crypto.name}</div>
+        <p>{crypto.symbol}</p>
+    </div>
+</div>
+
+
             ) : <div>Wait</div>
                 
             }
